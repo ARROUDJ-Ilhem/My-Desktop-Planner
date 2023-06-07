@@ -1,0 +1,41 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections-3.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-lang3-3.12.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-validator-1.7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-17.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-collections4-4.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-controls-19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-digester-2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-17.0.2-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/controlsfx-11.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-codec-1.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-17.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ical4j-4.0.0-beta2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/slf4j-api-1.7.36.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-controls-19-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-17.0.2-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ikonli-javafx-12.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/sqlite-jdbc-3.41.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-base-19-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jool-java-8-0.9.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-swing-17.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/view-11.12.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-beanutils-1.9.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/toolboxfx-17.0.27.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/controlsfx-11.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-19-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/toolbox-17.0.21.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ikonli-core-12.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-graphics-19.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/threeten-extra-1.7.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/javafx-controls-17.0.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-logging-1.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/ikonli-fontawesome-pack-12.3.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
