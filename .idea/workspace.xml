@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e8d649f-3f32-48b2-b444-8445401926c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/controllers/newCategoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Categorie.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Creneau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Decomposable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Etat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Jour.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Priorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Projet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Tache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/TacheObservable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Tcomposee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Tsimple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/Utilisateur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/models/UtilisateurDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/crenau.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/projet.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tp/javafx/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tp/javafx/controllers/homeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/controllers/homeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tp/javafx/controllers/loginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/controllers/loginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tp/javafx/controllers/newTaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tp/javafx/controllers/newTaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/back.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/back.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/delete.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/delete.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/edit.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/edit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/forward.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/forward.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/projects.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/projects.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/settings.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/settings.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/signout.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/signout.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/task.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/assets/task.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/css/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/css/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/database.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/tp/javafx/newTask.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/tp/javafx/newTask.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+        <option name="usePluginRegistry" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2QFLYVoAlRm8pMtuhEWNIhR8WLc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/USER/Documents/TP POO/My-Desktop-Planner",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e8d649f-3f32-48b2-b444-8445401926c4" name="Changes" comment="" />
+      <created>1684944433322</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684944433322</updated>
+    </task>
+    <servers />
+  </component>
+</project>
