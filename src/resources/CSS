@@ -1,0 +1,110 @@
+.gradientColor {
+  -fx-background-color: linear-gradient(to bottom right, #0093e9, #80d0c7);
+}
+
+.login {
+  -fx-background-color: #326ff4;
+  -fx-text-fill: white;
+}
+
+.newAccount {
+  -fx-background-color: #326ff4;
+  -fx-text-fill: white;
+}
+
+.back {
+    -fx-background-color: transparent;
+}
+
+.back SVGPath {
+    -fx-fill: #3C3C3C;
+}
+
+.menuitem {
+    -fx-cursor: hand;
+}
+
+.swipe {
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+}
+
+.swipe SVGPath {
+    -fx-fill: #3C3C3C;
+}
+
+.swipe:disabled {
+    -fx-background-color: transparent;
+}
+
+.swipe:disabled SVPath {
+    -fx-fill: #4A4A4A;
+}
+
+.actionButton {
+     -fx-background-color: transparent;
+}
+
+.actionButton SVGPath {
+    -fx-fill: #0093e9;
+}
+
+
+.icon {
+    -fx-background-color: transparent;
+}
+
+.icon SVGPath {
+    -fx-fill: #3C3C3C;
+}
+
+.login:hover {
+}
+
+.login:active {
+}
+
+.table-view{
+-fx-border-radius: 7px 7px 7px 7px;
+}
+
+.table-view:focused{
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #0093e9, #80d0c7);
+    -fx-background-radius: 7px 7px 0px 0px;
+}
+
+.table-view .column-header-background .label{
+    -fx-text-fill: white;
+}
+
+
+.table-view .column-header {
+        -fx-border-color: white;
+        -fx-cell-size: 18;
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell{
+    -fx-text-fill: black;
+}
+
+.table-row-cell{
+    -fx-background-color: transparent
+}
+
+.scroll-pane > .viewport {
+   -fx-background-color: transparent;
+}
+
+.scroll-pane {
+   -fx-background-color: transparent;
+}
+
+.project {
+    -fx-border-color: #0093e9;
+    -fx-border-radius: 10px;
+}
