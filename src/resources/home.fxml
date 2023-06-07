@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.calendarfx.view.CalendarView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0"
+            prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane prefHeight="720.0" prefWidth="1280.0">
+            <left>
+                <Pane prefHeight="720.0" prefWidth="359.0" styleClass="gradientColor" stylesheets="@css/globals.css"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <Label fx:id="username" layoutX="47.0" layoutY="79.0" textFill="WHITE">
+                            <font>
+                                <Font name="Amber EN Bold" size="36.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="47.0" layoutY="149.0" text="Bienvenue dans votre espace" textFill="WHITE">
+                            <font>
+                                <Font name="Amber EN" size="18.0"/>
+                            </font>
+                        </Label>
+                        <VBox alignment="CENTER" layoutX="43.0" layoutY="263.0" prefHeight="296.0" prefWidth="197.0"
+                              spacing="40.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToTasksCalendar" prefHeight="40.0"
+                                      spacing="15.0">
+                                    <children>
+                                        <Button prefHeight="32.0" prefWidth="32.0" styleClass="icon">
+                                            <graphic>
+                                                <SVGPath
+                                                        content="M6.4488 9.71355C5.80832 9.71535 5.17385 9.59009 4.58211 9.34503C3.99037 9.09996 3.45311 8.73996 3.00144 8.28585L0.877314 6.39852C0.463572 6.0291 0.213524 5.51046 0.182178 4.95669C0.166658 4.68249 0.205297 4.40792 0.295889 4.14865C0.386482 3.88938 0.527255 3.65049 0.710169 3.44563C0.893084 3.24077 1.11456 3.07394 1.36195 2.95466C1.60934 2.83539 1.8778 2.76602 2.152 2.75049C2.70577 2.71915 3.24931 2.90907 3.66306 3.27849L5.86936 5.248C5.9412 5.3329 6.02969 5.40216 6.12935 5.45152C6.22901 5.50087 6.33773 5.52926 6.4488 5.53494C6.63315 5.5349 6.80996 5.46177 6.94048 5.33158L11.9729 0.540102C12.377 0.174469 12.9079 -0.0188243 13.4525 0.00144763C13.9971 0.0217196 14.5121 0.253952 14.8879 0.648615C15.2637 1.04328 15.4704 1.56914 15.4639 2.11404C15.4575 2.65894 15.2384 3.17976 14.8534 3.56542L9.85855 8.32068C9.40977 8.76573 8.87757 9.11786 8.29247 9.35688C7.70736 9.59589 7.08083 9.7171 6.4488 9.71355ZM33.6098 4.8385C33.6098 4.28438 33.3897 3.75296 32.9978 3.36114C32.606 2.96932 32.0746 2.74919 31.5205 2.74919H20.3775C19.8234 2.74919 19.292 2.96932 18.9001 3.36114C18.5083 3.75296 18.2882 4.28438 18.2882 4.8385C18.2882 5.39262 18.5083 5.92404 18.9001 6.31586C19.292 6.70768 19.8234 6.92781 20.3775 6.92781H31.5205C32.0746 6.92781 32.606 6.70768 32.9978 6.31586C33.3897 5.92404 33.6098 5.39262 33.6098 4.8385ZM9.85855 19.4636L14.8534 14.7084C15.2384 14.3227 15.4575 13.8019 15.4639 13.257C15.4704 12.7121 15.2637 12.1862 14.8879 11.7916C14.5121 11.3969 13.9971 11.1647 13.4525 11.1444C12.9079 11.1241 12.377 11.3174 11.9729 11.6831L6.94048 16.4745C6.80988 16.6051 6.63277 16.6784 6.4481 16.6784C6.26343 16.6784 6.08632 16.6051 5.95572 16.4745L3.74802 14.2654C3.35608 13.8735 2.82448 13.6533 2.27019 13.6533C1.71589 13.6533 1.1843 13.8735 0.792349 14.2654C0.400402 14.6574 0.180209 15.189 0.180209 15.7433C0.180209 16.2976 0.400402 16.8292 0.792349 17.2211L3.00144 19.4288C3.90954 20.3364 5.13899 20.8491 6.42284 20.8556C7.70669 20.8621 8.94128 20.3619 9.85855 19.4636ZM33.6098 15.9815C33.6098 15.4273 33.3897 14.8959 32.9978 14.5041C32.606 14.1123 32.0746 13.8922 31.5205 13.8922H20.3775C19.8234 13.8922 19.292 14.1123 18.9001 14.5041C18.5083 14.8959 18.2882 15.4273 18.2882 15.9815C18.2882 16.5356 18.5083 17.067 18.9001 17.4588C19.292 17.8506 19.8234 18.0708 20.3775 18.0708H31.5205C32.0746 18.0708 32.606 17.8506 32.9978 17.4588C33.3897 17.067 33.6098 16.5356 33.6098 15.9815ZM9.85855 30.6066L14.8534 25.8513C15.2384 25.4657 15.4575 24.9449 15.4639 24.4C15.4704 23.8551 15.2637 23.3292 14.8879 22.9345C14.5121 22.5399 13.9971 22.3076 13.4525 22.2874C12.9079 22.2671 12.377 22.4604 11.9729 22.826L6.94048 27.6175C6.80996 27.7477 6.63315 27.8208 6.4488 27.8209C6.33773 27.8152 6.22901 27.7868 6.12935 27.7374C6.02969 27.6881 5.9412 27.6188 5.86936 27.5339L3.66306 25.5644C3.24931 25.195 2.70577 25.0051 2.152 25.0364C1.59822 25.0678 1.07958 25.3178 0.710169 25.7316C0.340757 26.1453 0.150833 26.6888 0.182178 27.2426C0.213524 27.7964 0.463572 28.315 0.877314 28.6844L2.99866 30.5718C3.90687 31.4802 5.13692 31.9934 6.42144 31.9999C7.70597 32.0065 8.94116 31.5057 9.85855 30.6066ZM33.6098 27.1244C33.6098 26.5703 33.3897 26.0389 32.9978 25.6471C32.606 25.2552 32.0746 25.0351 31.5205 25.0351H20.3775C19.8234 25.0351 19.292 25.2552 18.9001 25.6471C18.5083 26.0389 18.2882 26.5703 18.2882 27.1244C18.2882 27.6785 18.5083 28.21 18.9001 28.6018C19.292 28.9936 19.8234 29.2137 20.3775 29.2137H31.5205C32.0746 29.2137 32.606 28.9936 32.9978 28.6018C33.3897 28.21 33.6098 27.6785 33.6098 27.1244Z"/>
+                                            </graphic>
+                                        </Button>
+                                        <Label alignment="CENTER" text="Tâches " textAlignment="CENTER"
+                                               textFill="WHITE">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToProjects" prefHeight="40.0"
+                                      spacing="15.0">
+                                    <children>
+                                        <Button prefHeight="32.0" prefWidth="32.0" styleClass="icon">
+                                            <graphic>
+                                                <SVGPath
+                                                        content="M9.33331 0H5.33331C2.38781 0 0 2.38781 0 5.33331V9.33331C0 12.2789 2.38781 14.6667 5.33331 14.6666H9.33331C12.2788 14.6666 14.6666 12.2788 14.6666 9.33331V5.33331C14.6666 2.38781 12.2788 0 9.33331 0ZM9.33331 17.3333H5.33331C2.38781 17.3333 0 19.7211 0 22.6667V26.6667C0 29.6122 2.38781 32 5.33331 31.9999H9.33331C12.2788 31.9999 14.6666 29.6121 14.6666 26.6666V22.6666C14.6666 19.7211 12.2788 17.3333 9.33331 17.3333ZM22.6667 17.3333H26.6667C29.6122 17.3333 32 19.7211 32 22.6666V26.6666C32 29.6122 29.6122 32 26.6667 32H22.6667C19.7212 32 17.3334 29.6122 17.3334 26.6667V22.6667C17.3333 19.7211 19.7211 17.3333 22.6667 17.3333ZM22.6667 9.33331H18.6667C17.9303 9.33331 17.3334 8.73637 17.3334 8C17.3334 7.26362 17.9303 6.66669 18.6667 6.66669H22.6667V2.66669C22.6667 1.93031 23.2636 1.33337 24 1.33337C24.7364 1.33337 25.3333 1.93031 25.3333 2.66669V6.66669H29.3333C30.0697 6.66669 30.6666 7.26362 30.6666 8C30.6666 8.73637 30.0697 9.33331 29.3333 9.33331H25.3333V13.3333C25.3333 14.0697 24.7364 14.6666 24 14.6666C23.2636 14.6666 22.6667 14.0697 22.6667 13.3333V9.33331Z"/>
+                                            </graphic>
+                                        </Button>
+                                        <Label alignment="CENTER" text="Projets" textAlignment="CENTER"
+                                               textFill="WHITE">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" onMouseClicked="#switchToSettings" prefHeight="40.0"
+                                      spacing="15.0">
+                                    <children>
+                                        <Button prefHeight="32.0" prefWidth="30.0" styleClass="icon">
+                                            <graphic>
+                                                <SVGPath
+                                                        content="M1.13803 24C2.24091 25.9141 4.68672 26.5718 6.60085 25.4689C6.60216 25.4681 6.60341 25.4674 6.60473 25.4666L7.19804 25.1239C8.31804 26.0822 9.60542 26.8253 10.9954 27.3159V28C10.9954 30.2091 12.7862 32 14.9954 32C17.2045 32 18.9954 30.2091 18.9954 28V27.316C20.3855 26.8246 21.6729 26.0806 22.7927 25.1213L23.3887 25.4653C25.3032 26.5699 27.7508 25.9132 28.8554 23.9986C29.9599 22.0841 29.3033 19.6365 27.3887 18.5319L26.7967 18.1906C27.0632 16.7406 27.0632 15.2541 26.7967 13.8039L27.3887 13.4626C29.3033 12.3581 29.9599 9.91056 28.8554 7.99594C27.7508 6.08137 25.3033 5.42469 23.3887 6.52925L22.7954 6.87194C21.6742 5.91487 20.386 5.17313 18.9954 4.684V4C18.9954 1.79087 17.2045 0 14.9954 0C12.7862 0 10.9954 1.79087 10.9954 4V4.684C9.60523 5.17544 8.31779 5.91944 7.19804 6.87869L6.60204 6.53337C4.68741 5.42875 2.23991 6.08544 1.13535 8C0.0307823 9.91456 0.687408 12.3621 2.60204 13.4667L3.19404 13.808C2.92754 15.2581 2.92754 16.7446 3.19404 18.1947L2.60204 18.536C0.692721 19.6435 0.0382197 22.0862 1.13803 24ZM14.9954 10.6667C17.9409 10.6667 20.3287 13.0545 20.3287 16C20.3287 18.9455 17.9409 21.3333 14.9954 21.3333C12.0499 21.3333 9.66204 18.9455 9.66204 16C9.66204 13.0545 12.0499 10.6667 14.9954 10.6667Z"/>
+                                            </graphic>
+                                        </Button>
+                                        <Label alignment="CENTER" text="Options" textAlignment="CENTER"
+                                               textFill="WHITE">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox alignment="CENTER_LEFT" onMouseClicked="#handleAccount" prefHeight="40.0"
+                                      prefWidth="191.0" spacing="15.0">
+                                    <children>
+                                        <Button prefHeight="32.0" prefWidth="32.0" styleClass="icon">
+                                            <graphic>
+                                                <SVGPath
+                                                        content="M16 0C11.758 0.00474308 7.69108 1.69198 4.69153 4.69153C1.69198 7.69108 0.00474308 11.758 0 16C0.00710746 20.2413 1.6951 24.3068 4.69414 27.3059C7.69318 30.3049 11.7587 31.9929 16 32C20.2435 32 24.3131 30.3143 27.3137 27.3137C30.3143 24.3131 32 20.2435 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM25.7318 25.2326C24.8333 23.4202 23.446 21.8949 21.7267 20.8289C20.0073 19.7629 18.0243 19.1986 16.0013 19.1996C13.9783 19.2007 11.9959 19.7671 10.2776 20.8349C8.55942 21.9027 7.1738 23.4295 6.27712 25.2429C3.88469 22.7616 2.5516 19.4468 2.56 16C2.56 12.4355 3.976 9.01697 6.49648 6.49648C9.01697 3.976 12.4355 2.56 16 2.56C19.5645 2.56 22.983 3.976 25.5035 6.49648C28.024 9.01697 29.44 12.4355 29.44 16C29.448 19.442 28.1184 22.7524 25.7318 25.2326ZM16 6.4C14.8608 6.4 13.7471 6.73782 12.7999 7.37073C11.8527 8.00365 11.1144 8.90324 10.6785 9.95574C10.2425 11.0082 10.1284 12.1664 10.3507 13.2837C10.5729 14.4011 11.1215 15.4274 11.9271 16.2329C12.7326 17.0385 13.7589 17.5871 14.8763 17.8093C15.9936 18.0316 17.1518 17.9175 18.2043 17.4815C19.2568 17.0456 20.1563 16.3073 20.7893 15.3601C21.4222 14.4129 21.76 13.2992 21.76 12.16C21.76 11.4036 21.611 10.6546 21.3215 9.95574C21.0321 9.25691 20.6078 8.62193 20.0729 8.08707C19.5381 7.5522 18.9031 7.12792 18.2043 6.83845C17.5054 6.54899 16.7564 6.4 16 6.4Z"/>
+                                            </graphic>
+                                        </Button>
+                                        <Label alignment="CENTER" prefHeight="26.0" text="Compte" textAlignment="CENTER"
+                                               textFill="WHITE">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </Pane>
+            </left>
+            <center>
+                <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane fx:id="projects" prefWidth="640.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Label layoutX="101.0" layoutY="73.0" text="Projects" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="163.0"
+                                       text="All" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="731.0" layoutY="625.0" mnemonicParsing="false"
+                                        onAction="#addNewProject" prefHeight="36.0" prefWidth="125.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Add New">
+                                    <font>
+                                        <Font name="Amber EN" size="18.0"/>
+                                    </font>
+                                </Button>
+                                <ScrollPane layoutX="69.0" layoutY="230.0" prefHeight="330.0" prefWidth="790.0"
+                                            styleClass="scrollPane" stylesheets="@css/globals.css">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" stylesheets="@css/globals.css">
+                                            <children>
+                                                <VBox fx:id="projectsVbox" prefWidth="774.0" spacing="10.0"
+                                                      stylesheets="@css/globals.css">
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="settingsCustom" prefWidth="640.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Label layoutX="157.0" layoutY="73.0" text="Options" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="163.0"
+                                       text="Modifiez les jours spéciaux :" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="727.0" layoutY="621.0" mnemonicParsing="false"
+                                        onAction="#saveConfiguration" prefHeight="36.0" prefWidth="125.0"
+                                        styleClass="login" stylesheets="@css/globals.css" text="Sauvegarder">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="70.0" layoutY="77.0" onAction="#switchToSettings2" prefHeight="31.0"
+                                        prefWidth="18.0" styleClass="swipe" stylesheets="@css/globals.css">
+                                    <graphic>
+                                        <SVGPath
+                                                content="M7.01152 15.708C6.9184 15.6151 6.84451 15.5047 6.7941 15.3833C6.74369 15.2618 6.71774 15.1315 6.71774 15C6.71774 14.8685 6.74369 14.7382 6.7941 14.6167C6.84451 14.4953 6.9184 14.3849 7.01152 14.292L16.1834 5.12217C16.7461 4.55965 17.0624 3.79661 17.0626 3.00091C17.0628 2.20521 16.7469 1.44202 16.1844 0.879239C15.6218 0.316459 14.8588 0.000187623 14.0631 8.34508e-08C13.2674 -0.000187456 12.5042 0.315725 11.9414 0.878239L2.7696 10.0501C1.45916 11.3641 0.723267 13.1442 0.723267 15C0.723267 16.8558 1.45916 18.6359 2.7696 19.9499L11.9414 29.1218C12.5042 29.6843 13.2674 30.0002 14.0631 30C14.8588 29.9998 15.6218 29.6835 16.1844 29.1208C16.7469 28.558 17.0628 27.7948 17.0626 26.9991C17.0624 26.2034 16.7461 25.4403 16.1834 24.8778L7.01152 15.708Z"/>
+                                    </graphic>
+                                </Button>
+                                <ScrollPane layoutX="65.0" layoutY="237.0" prefHeight="330.0" prefWidth="790.0"
+                                            styleClass="scrollPane" stylesheets="@css/globals.css">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" stylesheets="@css/globals.css">
+                                            <children>
+                                                <VBox fx:id="daysList" prefWidth="774.0" spacing="10.0"
+                                                      stylesheets="@css/globals.css">
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="projectToAddPane" prefWidth="640.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Label fx:id="date11" layoutX="95.0" layoutY="64.0" text="Nouveau Projet"
+                                       textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="727.0" layoutY="634.0" mnemonicParsing="false"
+                                        onAction="#createNewProject" prefHeight="36.0" prefWidth="125.0"
+                                        styleClass="login" stylesheets="@css/globals.css" text="Créer Projet">
+                                    <font>
+                                        <Font name="Amber EN" size="18.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="projectTF" layoutX="70.0" layoutY="236.0" prefHeight="30.0"
+                                           prefWidth="204.0"/>
+                                <TextArea fx:id="projectTA" layoutX="70.0" layoutY="399.0" prefHeight="112.0"
+                                          prefWidth="590.0"
+                                          promptText="Description : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+                                    <font>
+                                        <Font name="Amber EN" size="16.0"/>
+                                    </font>
+                                </TextArea>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="185.0"
+                                       text="Nom du Projet :" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="70.0" layoutY="345.0"
+                                       text="Description :" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="project" prefWidth="640.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Label fx:id="projectTitle" layoutX="69.0" layoutY="64.0" text="Projet"
+                                       textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="69.0" layoutY="249.0"
+                                       text="Tâches" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <TableView fx:id="projectTableView" layoutX="69.0" layoutY="292.0" prefHeight="300.0"
+                                           prefWidth="783.0" stylesheets="@css/globals.css">
+                                    <columns>
+                                        <TableColumn fx:id="tacheProjet" prefWidth="190.0" resizable="false"
+                                                     text="Tache"/>
+                                        <TableColumn fx:id="tempsProjet" minWidth="7.0" prefWidth="120.0"
+                                                     resizable="false" text="Temps"/>
+                                        <TableColumn fx:id="deadlineProjet" prefWidth="140.0" resizable="false"
+                                                     text="Deadline"/>
+                                        <TableColumn fx:id="prioProjet" prefWidth="100.0" resizable="false"
+                                                     text="Priorité"/>
+                                        <TableColumn fx:id="etatProjet" prefWidth="100.0" resizable="false"
+                                                     text="Etat"/>
+                                        <TableColumn fx:id="actionsProjet" prefWidth="140.0" resizable="false"
+                                                     text="Actions"/>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                    </columnResizePolicy>
+                                </TableView>
+                                <Button layoutX="727.0" layoutY="634.0" mnemonicParsing="false" onAction="#createNew"
+                                        prefHeight="36.0" prefWidth="125.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Ajouter">
+                                    <font>
+                                        <Font name="Amber EN" size="18.0"/>
+                                    </font>
+                                </Button>
+                                <Label fx:id="projectDescription" layoutX="69.0" layoutY="115.0" prefHeight="116.0"
+                                       prefWidth="616.0"
+                                       text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                       wrapText="true">
+                                    <font>
+                                        <Font name="Amber EN" size="18.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="settings" layoutX="10.0" layoutY="10.0" prefWidth="640.0"
+                              style="-fx-background-color: #fff;">
+                            <children>
+                                <Label layoutX="157.0" layoutY="73.0" text="Options" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="116.0" layoutY="155.0"
+                                       text="Choisissez la période :" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="727.0" layoutY="636.0" mnemonicParsing="false"
+                                        onAction="#saveConfigurationSimple" prefHeight="36.0" prefWidth="125.0"
+                                        styleClass="login" stylesheets="@css/globals.css" text="Sauvegarder">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <VBox layoutX="116.0" layoutY="245.0" prefHeight="80.0" prefWidth="250.0"
+                                      spacing="18.0">
+                                    <children>
+                                        <Label text="Date Début" textFill="#3c3c3c">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <DatePicker fx:id="startDate1" onAction="#startDateChange" prefHeight="36.0"
+                                                    prefWidth="269.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="507.0" layoutY="245.0" prefHeight="81.0" prefWidth="246.0"
+                                      spacing="18.0">
+                                    <children>
+                                        <Label text="Date Fin" textFill="#3c3c3c">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <DatePicker fx:id="endDate1" onAction="#endDateChange" prefHeight="36.0"
+                                                    prefWidth="269.0"/>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="116.0" layoutY="386.0" prefHeight="71.0" prefWidth="250.0"
+                                      spacing="18.0">
+                                    <children>
+                                        <Label text="Début du Crénau principal" textFill="#3c3c3c">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="243.0" spacing="5.0">
+                                            <children>
+                                                <TextField fx:id="heuresDebut" prefHeight="29.0" prefWidth="115.0"
+                                                           promptText="heures">
+                                                    <font>
+                                                        <Font name="Amber EN" size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <Label text=":" textFill="#3c3c3c">
+                                                    <font>
+                                                        <Font name="Amber EN Medium" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="minutesDebut" prefHeight="29.0" prefWidth="120.0"
+                                                           promptText="minutes">
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <VBox layoutX="507.0" layoutY="386.0" prefHeight="71.0" prefWidth="250.0"
+                                      spacing="18.0">
+                                    <children>
+                                        <Label text="Fin de Crénau principal" textFill="#3c3c3c">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="243.0" spacing="5.0">
+                                            <children>
+                                                <TextField fx:id="heuresFin" prefHeight="29.0" prefWidth="115.0"
+                                                           promptText="heures">
+                                                    <font>
+                                                        <Font name="Amber EN" size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <Label text=":" textFill="#3c3c3c">
+                                                    <font>
+                                                        <Font name="Amber EN Medium" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="minutesFin" prefHeight="29.0" prefWidth="120.0"
+                                                           promptText="minutes">
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                                <Button fx:id="custom" layoutX="553.0" layoutY="636.0" mnemonicParsing="false"
+                                        onAction="#switchToCustomSettings" prefHeight="36.0" prefWidth="148.0"
+                                        styleClass="login" stylesheets="@css/globals.css" text="Plus d'options">
+                                    <font>
+                                        <Font name="Amber EN" size="18.0"/>
+                                    </font>
+                                </Button>
+                                <VBox layoutX="116.0" layoutY="524.0" prefHeight="71.0" prefWidth="250.0"
+                                      spacing="18.0">
+                                    <children>
+                                        <Label text="Durée Minimale du Créneau" textFill="#3c3c3c">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <HBox alignment="CENTER_LEFT" prefHeight="29.0" prefWidth="243.0" spacing="5.0">
+                                            <children>
+                                                <TextField fx:id="dureeDebut" prefHeight="29.0" prefWidth="115.0"
+                                                           promptText="heures">
+                                                    <font>
+                                                        <Font name="Amber EN" size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                                <Label text=":" textFill="#3c3c3c">
+                                                    <font>
+                                                        <Font name="Amber EN Medium" size="18.0"/>
+                                                    </font>
+                                                </Label>
+                                                <TextField fx:id="dureeFin" prefHeight="29.0" prefWidth="120.0"
+                                                           promptText="minutes">
+                                                    <font>
+                                                        <Font size="14.0"/>
+                                                    </font>
+                                                </TextField>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="tasksTable" prefWidth="640.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Label fx:id="date" layoutX="101.0" layoutY="73.0" text="Saturday May 13"
+                                       textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <HBox alignment="CENTER" layoutX="637.0" layoutY="72.0" prefHeight="40.0"
+                                      prefWidth="122.0" spacing="10.0" stylesheets="@css/globals.css">
+                                    <Button fx:id="back" disable="true" onAction="#swipeDayBackwards" prefHeight="31.0"
+                                            prefWidth="18.0" styleClass="swipe">
+                                        <graphic>
+                                            <SVGPath
+                                                    content="M7.01152 15.708C6.9184 15.6151 6.84451 15.5047 6.7941 15.3833C6.74369 15.2618 6.71774 15.1315 6.71774 15C6.71774 14.8685 6.74369 14.7382 6.7941 14.6167C6.84451 14.4953 6.9184 14.3849 7.01152 14.292L16.1834 5.12217C16.7461 4.55965 17.0624 3.79661 17.0626 3.00091C17.0628 2.20521 16.7469 1.44202 16.1844 0.879239C15.6218 0.316459 14.8588 0.000187623 14.0631 8.34508e-08C13.2674 -0.000187456 12.5042 0.315725 11.9414 0.878239L2.7696 10.0501C1.45916 11.3641 0.723267 13.1442 0.723267 15C0.723267 16.8558 1.45916 18.6359 2.7696 19.9499L11.9414 29.1218C12.5042 29.6843 13.2674 30.0002 14.0631 30C14.8588 29.9998 15.6218 29.6835 16.1844 29.1208C16.7469 28.558 17.0628 27.7948 17.0626 26.9991C17.0624 26.2034 16.7461 25.4403 16.1834 24.8778L7.01152 15.708Z"/>
+                                        </graphic>
+                                    </Button>
+                                    <Button fx:id="forward" onAction="#swipeDayForward" prefHeight="31.0"
+                                            prefWidth="18.0" styleClass="swipe">
+                                        <graphic>
+                                            <SVGPath
+                                                    content="M15.268 10.0528L6.09614 0.880925C5.53336 0.31841 4.77017 0.0024981 3.97447 0.00268563C3.17877 0.00287316 2.41573 0.319144 1.85321 0.881924C1.2907 1.4447 0.974788 2.20789 0.974976 3.00359C0.975163 3.7993 1.29144 4.56234 1.85421 5.12485L11.026 14.2947C11.1192 14.3876 11.1931 14.4979 11.2435 14.6194C11.2939 14.7409 11.3198 14.8712 11.3198 15.0027C11.3198 15.1342 11.2939 15.2645 11.2435 15.3859C11.1931 15.5074 11.1192 15.6178 11.026 15.7107L1.85421 24.8805C1.29144 25.443 0.975163 26.2061 0.974976 27.0018C0.974788 27.7975 1.2907 28.5607 1.85321 29.1234C2.41573 29.6862 3.17877 30.0025 3.97447 30.0027C4.77017 30.0029 5.53336 29.687 6.09614 29.1244L15.268 19.9526C16.5784 18.6386 17.3143 16.8585 17.3143 15.0027C17.3143 13.1469 16.5784 11.3668 15.268 10.0528Z"/>
+                                        </graphic>
+                                    </Button>
+                                </HBox>
+                                <Label fx:id="todayOrNot" alignment="CENTER" contentDisplay="CENTER" layoutX="69.0"
+                                       layoutY="163.0" text="Aujourd'hui" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <TableView fx:id="tachesTable" layoutX="69.0" layoutY="230.0" prefHeight="357.0"
+                                           prefWidth="783.0" stylesheets="@css/globals.css">
+                                    <columns>
+                                        <TableColumn fx:id="tacheName" prefWidth="190.0" resizable="false"
+                                                     text="Tache"/>
+                                        <TableColumn fx:id="tacheDuration" minWidth="7.0" prefWidth="120.0"
+                                                     resizable="false" text="Temps"/>
+                                        <TableColumn fx:id="tacheDeadline" prefWidth="140.0" resizable="false"
+                                                     text="Deadline"/>
+                                        <TableColumn fx:id="tachePriority" prefWidth="100.0" resizable="false"
+                                                     text="Priorité"/>
+                                        <TableColumn fx:id="tacheEtat" prefWidth="100.0" resizable="false" text="Etat"/>
+                                        <TableColumn fx:id="tacheActions" prefWidth="140.0" resizable="false"
+                                                     text="Actions"/>
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                                    </columnResizePolicy>
+                                </TableView>
+                                <Button layoutX="727.0" layoutY="621.0" mnemonicParsing="false" onAction="#createNew"
+                                        prefHeight="36.0" prefWidth="125.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Ajouter">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button disable="true" layoutX="521.0" layoutY="621.0" mnemonicParsing="false"
+                                        onAction="#createNew" prefHeight="36.0" prefWidth="159.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Ajouter Plusieurs">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="69.0" layoutY="621.0" mnemonicParsing="false"
+                                        onAction="#switchToTasksCalendar" prefHeight="36.0" prefWidth="125.0"
+                                        styleClass="login" stylesheets="@css/globals.css" text="Vue Calendrier">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="account" prefWidth="640.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Label layoutX="163.0" layoutY="78.0" text="Your Account" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="28.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="usernameLB" alignment="CENTER" contentDisplay="CENTER" layoutX="91.0"
+                                       layoutY="226.0" text="Username :" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="91.0" layoutY="399.0"
+                                       text="Earned Badges :" textFill="#3c3c3c">
+                                    <font>
+                                        <Font name="Amber EN Medium" size="24.0"/>
+                                    </font>
+                                </Label>
+                                <Button layoutX="89.0" layoutY="622.0" mnemonicParsing="false" onAction="#addCategory"
+                                        prefHeight="36.0" prefWidth="125.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Add Category">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <HBox layoutX="692.0" layoutY="611.0" onMouseClicked="#handleSignOut" spacing="10.0">
+                                    <children>
+                                        <Button prefHeight="36.0" prefWidth="36.0" styleClass="icon"
+                                                stylesheets="@css/globals.css">
+                                            <graphic>
+                                                <SVGPath
+                                                        content="M6.11216 32.5021H12.9995C14.2423 32.5021 15.2498 33.5096 15.2498 34.7524C15.2498 35.9951 14.2423 37.0027 12.9995 37.0027H6.11216C3.28904 36.9994 1.00135 34.7116 0.998047 31.8884V6.11218C1.00135 3.28913 3.28904 1.00134 6.11216 0.998047H12.9995C14.2423 0.998047 15.2498 2.00555 15.2498 3.24833C15.2498 4.49112 14.2423 5.49862 12.9995 5.49862H6.11216C5.77363 5.49941 5.49945 5.77366 5.49861 6.11218V31.8885C5.49938 32.227 5.77363 32.5012 6.11216 32.5021ZM29.2015 8.40749L35.0252 14.2267L35.0207 14.2268C37.6572 16.8632 37.6572 21.1376 35.0207 23.774L29.2015 29.5932C28.3377 30.3989 26.998 30.3995 26.1334 29.5947C25.2238 28.7479 25.1728 27.324 26.0196 26.4144L31.2208 21.2132L10.7492 21.2506C9.50643 21.2506 8.49893 20.2431 8.49893 19.0003C8.49893 17.7576 9.50643 16.7501 10.7492 16.7501L31.1382 16.7081L26.0196 11.5909C25.1405 10.7123 25.1402 9.28733 26.0188 8.40824C26.8975 7.52916 28.3224 7.52881 29.2015 8.40749Z"/>
+                                            </graphic>
+                                        </Button>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" text="Log Out"
+                                               textFill="#3c3c3c">
+                                            <font>
+                                                <Font name="Amber EN Medium" size="24.0"/>
+                                            </font>
+                                        </Label>
+                                    </children>
+                                </HBox>
+                                <HBox layoutX="319.0" layoutY="319.0" prefHeight="140.0" spacing="48.0">
+                                    <children>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="100.0" prefWidth="64.0">
+                                            <children>
+                                                <Button prefWidth="64" styleClass="icon" stylesheets="@css/globals.css">
+                                                    <graphic>
+                                                        <SVGPath
+                                                                content="M40.3779 0L31.3934 4.94483L22.1565 0.511109L17.2732 9.52633L7.10016 10.7764L7.88223 20.9986L0 27.5568L6.2011 35.7407L3.10979 45.5195L12.7286 49.0541L15.4258 58.9561L19.7056 57.9893V96.1932L32.0216 79.7761L44.3375 96.1932V56.9794L50.3724 57.9647L50.9882 55.1074L52.503 47.9519L61.9248 43.8876L58.2915 34.2813L64 25.7833L55.7606 19.6746L55.9823 9.41549L45.7416 8.73812L40.3779 0ZM38.2103 8.23317L42.1514 14.6682L49.695 15.1732L49.541 22.7166L55.6128 27.2119L51.3884 33.493L54.0733 40.55L47.1333 43.5613L45.5568 50.9323L38.1118 49.7192L32.7975 55.0766L27.1937 50.0148L19.8164 51.6528L17.8397 44.368L10.758 41.7693L13.0303 34.5645L8.4734 28.5359L14.2804 23.7019L13.7015 16.1707L21.2143 15.2471L24.7921 8.6088L31.6028 11.8787L38.2103 8.23317ZM32.0154 16.14C27.9364 16.153 24.0282 17.7791 21.1439 20.6634C18.2595 23.5476 16.6334 27.4558 16.6204 31.5348C16.6204 39.9958 23.5482 46.9297 32.0154 46.9297C40.4826 46.9297 47.4104 39.9958 47.4104 31.5348C47.4104 23.0676 40.4826 16.14 32.0154 16.14ZM32.0154 22.2979C37.1512 22.2979 41.2524 26.3929 41.2524 31.5348C41.2524 36.6705 37.1512 40.7717 32.0154 40.7717C26.8796 40.7717 22.7784 36.6705 22.7784 31.5348C22.7784 26.3929 26.8796 22.2979 32.0154 22.2979ZM25.8574 57.1149L33.0376 63.5992L38.1734 58.4019V77.707L32.0154 69.5047L25.8574 77.7194V57.1149Z"/>
+                                                    </graphic>
+                                                </Button>
+                                                <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0"
+                                                      spacing="8.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER" text="Good"
+                                                               textFill="#3c3c3c">
+                                                            <font>
+                                                                <Font name="Amber EN Medium" size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="goodLB" alignment="CENTER" contentDisplay="CENTER"
+                                                               text="0" textFill="#3c3c3c">
+                                                            <font>
+                                                                <Font name="Amber EN Medium" size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="100.0">
+                                            <children>
+                                                <Button prefWidth="64" styleClass="icon" stylesheets="@css/globals.css">
+                                                    <graphic>
+                                                        <SVGPath
+                                                                content="M63.5815 30.7599L59.055 24.766L59.9851 17.3047C60.1091 16.3746 59.5924 15.4859 58.7244 15.1139L51.8004 12.1996L48.8862 5.27564C48.5141 4.40757 47.6254 3.89085 46.6953 4.01487L39.2546 4.94495L33.2608 0.418545C32.8966 0.146807 32.4544 0 32 0C31.5456 0 31.1034 0.146807 30.7392 0.418545L24.7454 4.94495L17.3047 4.01487C16.3746 3.89085 15.4859 4.40757 15.1138 5.27564L12.1996 12.1996L5.27564 15.1139C4.40756 15.4859 3.89085 16.3746 4.01486 17.3047L4.94494 24.766L0.418545 30.7599C0.146806 31.1241 0 31.5663 0 32.0207C0 32.4751 0.146806 32.9173 0.418545 33.2815L4.94494 39.2753L4.01486 46.716C3.89085 47.6461 4.40756 48.5348 5.27564 48.9069L12.1996 51.8211L15.1138 58.7451C15.4859 59.6131 16.3746 60.1298 17.3047 60.0058H17.346L9.78137 88.7557C9.57469 89.5825 9.86405 90.4506 10.5668 90.9673C10.9388 91.236 11.3728 91.3806 11.8069 91.3806C12.1789 91.3806 12.5716 91.2773 12.9023 91.0706L32 79.2482L51.0977 91.0706C51.8211 91.5253 52.7512 91.484 53.4332 90.9673C54.1153 90.4506 54.4253 89.5825 54.2186 88.7557L46.654 60.0058H46.6953C47.6254 60.1298 48.5141 59.6131 48.8862 58.7451L51.8004 51.8211L58.7244 48.9069C59.5924 48.5348 60.1091 47.6461 59.9851 46.716L59.055 39.2753L63.5815 33.2815C64.1395 32.5374 64.1395 31.504 63.5815 30.7599ZM48.8655 84.7254L33.1161 74.9698C32.434 74.5565 31.5866 74.5565 30.9252 74.9698L15.1758 84.7254L21.8311 59.4065L24.7867 59.0344L30.7806 63.5608C31.1526 63.8502 31.5866 63.9742 32.0413 63.9742C32.496 63.9742 32.9301 63.8295 33.3021 63.5608L39.296 59.0344L42.2516 59.4065L48.8655 84.7254ZM55.2107 37.4152C54.88 37.8492 54.7353 38.3866 54.7973 38.924L55.6447 45.6412L49.4029 48.2661C48.9068 48.4728 48.4935 48.8862 48.2868 49.3822L45.6619 55.6448L38.9446 54.7974C38.4072 54.7147 37.8699 54.8801 37.4358 55.2108L32.0207 59.3031L26.6055 55.2108C26.2335 54.9421 25.7994 54.7974 25.3447 54.7974H25.3447C25.262 54.7974 25.1794 54.7974 25.0761 54.818L18.3588 55.6655L15.7546 49.4029C15.5479 48.9069 15.1345 48.4935 14.6385 48.2868L8.39658 45.6619L9.24399 38.9446C9.306 38.4073 9.16132 37.8699 8.83062 37.4358L4.73826 32.0207L8.83062 26.6055C9.16132 26.1715 9.306 25.6341 9.24399 25.0967L8.39658 18.3795L14.6385 15.7546C15.1345 15.5479 15.5479 15.1345 15.7546 14.6385L18.3795 8.37592L25.0967 9.22333C25.6341 9.28533 26.1715 9.14065 26.6055 8.80996L32.0207 4.71759L37.4358 8.80996C37.8699 9.14065 38.4072 9.28533 38.9446 9.22333L45.6619 8.37592L48.2868 14.6178C48.4935 15.1139 48.9068 15.5272 49.4029 15.7339L55.6447 18.3588L54.7973 25.0761C54.7353 25.6135 54.88 26.1508 55.2107 26.5849L59.3031 32L55.2107 37.4152ZM32.0209 12.0136C20.9839 12.0136 12.0138 20.9837 12.0138 32.0207C12.0138 43.0577 20.9839 52.0278 32.0209 52.0278C43.0579 52.0278 52.028 43.0577 52.028 32.0207C52.028 20.9837 43.0579 12.0136 32.0209 12.0136ZM32.0209 47.8528C23.2988 47.8528 16.1888 40.7428 16.1888 32.0207C16.1888 23.2986 23.2988 16.1886 32.0209 16.1886C40.743 16.1886 47.853 23.2986 47.853 32.0207C47.853 40.7428 40.743 47.8528 32.0209 47.8528ZM29.189 35.1623L39.8953 24.456C40.7013 23.6293 42.0241 23.6293 42.8095 24.456C43.6156 25.2828 43.6156 26.6055 42.8095 27.4116L30.6358 39.5854C30.2431 39.9987 29.7057 40.2054 29.1683 40.2054C28.6516 40.2054 28.1142 39.9987 27.7009 39.5854L21.1903 33.0748C20.3842 32.248 20.3842 30.9253 21.1903 30.1192C22.017 29.3131 23.3398 29.3131 24.1459 30.1192L29.189 35.1623Z"/>
+                                                    </graphic>
+                                                </Button>
+                                                <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" spacing="8.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER"
+                                                               text="Very Good" textFill="#3c3c3c">
+                                                            <font>
+                                                                <Font name="Amber EN Medium" size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="veryGoodLB" alignment="CENTER"
+                                                               contentDisplay="CENTER" text="0" textFill="#3c3c3c">
+                                                            <font>
+                                                                <Font name="Amber EN Medium" size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                        <VBox alignment="BOTTOM_CENTER" prefHeight="100.0">
+                                            <children>
+                                                <Button prefWidth="64" styleClass="icon" stylesheets="@css/globals.css">
+                                                    <graphic>
+                                                        <SVGPath
+                                                                content="M26.4542 0.0339921C26.0168 0.111176 25.8496 0.273264 25.6489 0.435351C25.4482 0.597438 25.209 0.787826 25.0057 0.998797C24.6043 1.42331 24.2339 1.93016 23.799 2.44729C23.3694 2.96185 22.9372 3.51244 22.595 3.89321C22.4226 4.0836 22.2193 4.1968 22.1113 4.29457L22.0315 4.37433C21.8874 4.37433 21.6404 4.32802 21.3883 4.29714C20.884 4.22511 20.2794 4.09132 19.6182 3.97297C18.9596 3.85719 18.27 3.79545 17.6886 3.73113C17.4004 3.70282 17.1431 3.64622 16.8859 3.65394C16.5738 3.64537 16.2661 3.72857 16.0008 3.89321C15.7278 4.03967 15.5041 4.2634 15.3576 4.53642C15.2264 4.75768 15.1518 4.9918 15.036 5.25938C14.7765 5.8686 14.5354 6.4855 14.313 7.10923C14.0815 7.74471 13.8628 8.31845 13.6698 8.797C13.5721 9.03627 13.4975 9.22923 13.428 9.36044C13.4074 9.39903 13.3637 9.41704 13.3482 9.4402C13.2119 9.48394 12.9546 9.54311 12.705 9.60229C12.2059 9.71292 11.5936 9.80554 10.9349 9.92389C10.2788 10.0422 9.57132 10.1837 9.0053 10.3252C8.72229 10.3947 8.52418 10.4719 8.28491 10.5671C8.04306 10.6623 7.76005 10.7112 7.47961 11.0482C7.1966 11.3878 7.20689 11.6785 7.15801 11.9333C7.10655 12.188 7.09626 12.4452 7.07568 12.7385C7.03709 13.3226 6.9985 13.9915 6.9985 14.6682C6.99592 15.3422 7.01651 16.0009 6.9985 16.5154C6.98563 16.7727 6.93675 17.0146 6.91617 17.1586C6.89816 17.1664 6.89301 17.1947 6.83641 17.2384C6.72063 17.331 6.56883 17.5034 6.35272 17.6423C5.92306 17.9176 5.32359 18.2675 4.7447 18.6071C4.16581 18.9467 3.62038 19.2426 3.13668 19.5719C2.89484 19.7366 2.68901 19.8807 2.49348 20.0531C2.30052 20.2254 2.08183 20.3644 1.9326 20.776C1.81746 21.0562 1.78879 21.3644 1.85027 21.6611C1.89144 21.9183 2.01236 22.1833 2.09212 22.4664C2.2542 23.0298 2.42658 23.6807 2.65557 24.3162C2.88197 24.9491 3.1444 25.5923 3.29877 26.0837C3.37596 26.3281 3.42741 26.5829 3.45829 26.7269C3.45057 26.7527 3.49688 26.7527 3.45829 26.8067C3.3811 26.9302 3.21387 27.1669 3.05693 27.3701C2.74561 27.7792 2.35969 28.2192 1.93003 28.7363C1.50294 29.256 1.06813 29.7912 0.725947 30.2646C0.553567 30.5012 0.36575 30.7611 0.242255 30.9875C0.0773989 31.2528 -0.00663733 31.5603 0.00040949 31.8726C0.00040949 32.3099 0.118759 32.4489 0.242255 32.6778C0.36575 32.9017 0.553567 33.1615 0.725947 33.3982C1.06813 33.8742 1.50294 34.4094 1.9326 34.9291C2.35969 35.4462 2.74561 35.9659 3.05693 36.375C3.2113 36.5782 3.3811 36.7352 3.45829 36.8587C3.48402 36.8947 3.52518 36.9101 3.54062 36.9359C3.53033 36.9693 3.46858 36.9745 3.45829 37.0182C3.41347 37.2083 3.36024 37.3963 3.29877 37.5816C3.1444 38.0705 2.88197 38.7137 2.65557 39.3492C2.42658 39.9846 2.2542 40.6356 2.09212 41.199C2.01236 41.482 1.89144 41.747 1.85027 42.0043C1.78931 42.3001 1.81798 42.6074 1.9326 42.8868C2.07925 43.2984 2.30052 43.4399 2.49348 43.6123C2.68901 43.7847 2.89484 43.9288 3.13668 44.0934C3.62038 44.4202 4.16581 44.7984 4.7447 45.138C5.32359 45.4776 5.92306 45.7477 6.35272 46.023C6.56883 46.162 6.72063 46.3343 6.83641 46.4244C6.89301 46.4707 6.89816 46.5788 6.91617 46.5865C6.93932 46.7331 6.98821 46.9209 6.99592 47.1474C7.01651 47.6645 6.99592 48.3231 6.99592 48.9998C6.99592 49.6739 7.03709 50.3428 7.07825 50.9294C7.09626 51.2201 7.10655 51.4774 7.15544 51.7321C7.20689 51.9868 7.1966 52.2775 7.47961 52.6146C7.76262 52.9542 8.04306 53.0031 8.28234 53.0983C8.52418 53.1935 8.72486 53.2681 9.00787 53.3401C9.5739 53.4816 10.2788 53.6231 10.9375 53.7415C11.5936 53.8598 12.2059 53.9524 12.705 54.0631C12.9546 54.1171 13.2119 54.1789 13.3482 54.2252C13.374 54.2329 13.4074 54.2149 13.428 54.2252C13.4434 54.2457 13.4126 54.2715 13.428 54.3023C13.4975 54.431 13.5721 54.6291 13.6698 54.8684C13.8293 55.262 14.0455 55.7894 14.2333 56.3143L8.84579 65.9623C8.38525 66.8345 9.33462 68.0463 10.2943 67.8122L16.0831 66.2839L17.6088 72.0728C17.8635 73.0967 19.5719 73.2666 20.0221 72.3146L25.2475 62.8261C25.3916 62.9547 25.5151 63.1194 25.6489 63.23C25.8496 63.3921 26.0168 63.5516 26.4542 63.6314C26.8916 63.7086 27.0923 63.6314 27.3393 63.549C27.5837 63.4641 27.8024 63.3561 28.0596 63.2274C28.5845 62.9702 29.1711 62.5997 29.75 62.2626C30.3289 61.9282 30.9078 61.6194 31.358 61.3802C31.5844 61.2592 31.7877 61.1949 31.9215 61.1383C31.9472 61.1512 32.0141 61.1126 32.081 61.1383C32.2148 61.1949 32.418 61.2592 32.6444 61.3802C33.0972 61.6194 33.6736 61.9282 34.2524 62.2626C34.8339 62.5997 35.4179 62.9702 35.9402 63.2274C36.2026 63.3561 36.4188 63.4641 36.6657 63.549C36.9102 63.6339 37.1108 63.7111 37.5482 63.6314C37.8165 63.5982 38.069 63.4863 38.2738 63.3098C38.3252 63.266 38.3793 63.2017 38.4333 63.1477L43.6587 72.3146C44.1089 73.2666 45.8199 73.0967 46.072 72.0728L47.5977 66.2839L53.3865 67.8122C54.3436 68.0489 55.2956 66.8345 54.835 65.9623L49.6096 56.7954C49.6302 56.7388 49.6688 56.6951 49.6894 56.6359C49.921 56.003 50.1396 55.3443 50.3326 54.8658C50.4304 54.6265 50.505 54.4336 50.5744 54.3049C50.559 54.2689 50.6259 54.2509 50.6542 54.2226C50.7906 54.1789 51.0479 54.1171 51.2974 54.0631C51.7965 53.9524 52.4089 53.8598 53.0675 53.7415C53.7236 53.6231 54.4311 53.479 54.9971 53.3401C55.2801 53.2706 55.4783 53.1935 55.7175 53.0983C55.9594 53.0031 56.2424 52.9542 56.5228 52.6146C56.8058 52.2775 56.7955 51.9868 56.8444 51.7321C56.8959 51.4748 56.9062 51.2201 56.9268 50.9268C56.9653 50.3428 57.0039 49.6739 57.0039 48.9972C57.0065 48.3231 56.9859 47.6645 57.0039 47.1499C57.0142 46.9235 57.0631 46.7331 57.0863 46.5839C57.0786 46.5891 57.0811 46.5196 57.0863 46.5067C57.1069 46.4887 57.1326 46.4527 57.166 46.4244C57.2818 46.3343 57.4336 46.162 57.6497 46.023C58.0794 45.7477 58.6789 45.4776 59.2577 45.138C59.834 44.7984 60.3821 44.4202 60.8658 44.0934C61.1076 43.9288 61.3134 43.7847 61.509 43.6097C61.7019 43.4374 61.9206 43.301 62.0698 42.8893C62.2191 42.4751 62.111 42.259 62.0698 42.0017C62.0312 41.7444 61.9927 41.4794 61.9103 41.199C61.7482 40.633 61.4935 39.9846 61.2671 39.3492C61.0407 38.7162 60.8606 38.073 60.7037 37.5816C60.6424 37.3962 60.5892 37.2082 60.5441 37.0182C60.5416 37.0028 60.467 37.0311 60.4618 37.0182C60.449 37.0439 60.4464 37.0259 60.4618 36.9384C60.4773 36.9076 60.521 36.8947 60.5441 36.8587C60.6213 36.7326 60.7886 36.5782 60.9455 36.375C61.2568 35.9659 61.6402 35.4488 62.0724 34.9265C62.4995 34.4094 62.9343 33.8742 63.2765 33.4008C63.4489 33.1641 63.6367 32.9043 63.7602 32.6778C63.8837 32.4489 63.9995 32.3099 63.9995 31.8726C64.0076 31.5605 63.9244 31.2529 63.7602 30.9875C63.6131 30.7374 63.4516 30.496 63.2765 30.2646C62.8908 29.7429 62.4893 29.2333 62.0724 28.7363C61.6427 28.2192 61.2568 27.7792 60.9455 27.3701C60.8043 27.1877 60.6704 26.9997 60.5441 26.8067C60.5056 26.7449 60.5519 26.7475 60.5441 26.7269C60.575 26.5829 60.6265 26.3281 60.7037 26.0837C60.858 25.5949 61.0381 24.9517 61.2671 24.3136C61.4935 23.6807 61.7482 23.0272 61.9103 22.4664C61.9901 22.1833 62.0312 21.9183 62.0724 21.6611C62.111 21.4064 62.2191 21.1902 62.0724 20.776C61.9232 20.3644 61.7019 20.2254 61.5064 20.0556C61.3029 19.8804 61.088 19.7188 60.8632 19.5719C60.3821 19.2426 59.834 18.9467 59.2577 18.6071C58.6789 18.2675 58.0794 17.9176 57.6497 17.6423C57.4336 17.5034 57.2818 17.3284 57.166 17.241C57.166 17.2307 57.0888 17.2513 57.0863 17.241C57.0425 17.1612 57.0683 17.1509 57.0863 17.1586C57.0657 17.012 57.0168 16.7727 57.0065 16.5154C56.9859 16.0009 57.0065 15.3422 57.0065 14.6656C57.0065 13.9915 56.9653 13.3226 56.9242 12.736C56.9062 12.4452 56.8959 12.188 56.847 11.9333C56.7955 11.6785 56.8058 11.3878 56.5228 11.0482C56.2398 10.7086 55.9594 10.6623 55.7201 10.5671C55.4846 10.4686 55.2421 10.3878 54.9946 10.3252C54.4285 10.1837 53.7236 10.0422 53.0649 9.92389C52.4089 9.80554 51.7965 9.71292 51.2974 9.60229C51.0807 9.55795 50.8661 9.50387 50.6542 9.4402C50.6388 9.41447 50.595 9.39903 50.5744 9.36044C50.505 9.22923 50.4304 9.03627 50.3326 8.797C50.1396 8.32102 49.921 7.74214 49.6894 7.10923C49.4578 6.47374 49.2006 5.79709 48.9664 5.25938C48.8481 4.9918 48.776 4.75768 48.6448 4.53642C48.4984 4.2634 48.2746 4.03967 48.0016 3.89321C47.7373 3.72624 47.4291 3.64202 47.1166 3.65137C46.8593 3.65137 46.602 3.70282 46.3113 3.73113C45.7324 3.79545 45.0429 3.85977 44.3817 3.97297C43.723 4.08875 43.121 4.2251 42.6141 4.29457C42.362 4.32802 42.115 4.37176 41.9709 4.37433C41.9555 4.37176 41.9349 4.39234 41.8912 4.37433C41.8732 4.35889 41.9117 4.31515 41.8912 4.29714C41.7831 4.1968 41.5824 4.0836 41.4075 3.89321C41.0653 3.51244 40.6356 2.96185 40.2034 2.44472C39.7711 1.93016 39.3981 1.42331 38.9942 0.998797C38.7935 0.787826 38.5542 0.600011 38.351 0.435351C38.1528 0.273264 37.9856 0.111176 37.5482 0.0339921C37.1108 -0.0431923 36.9102 0.0339921 36.6657 0.113749C36.4188 0.198652 36.2026 0.30671 35.9402 0.435351C35.4179 0.695205 34.8339 1.06569 34.2524 1.40016C33.671 1.73462 33.0947 2.04593 32.6444 2.2852C32.418 2.40613 32.2148 2.5502 32.081 2.60681C31.9472 2.66083 31.816 2.60681 32.0012 2.60681C32.1865 2.60681 32.0527 2.66083 31.9215 2.60681C31.7877 2.55278 31.5844 2.40613 31.358 2.2852C30.9052 2.04593 30.3289 1.73719 29.75 1.40016C29.1711 1.06569 28.5845 0.695205 28.0622 0.435351C27.7998 0.30671 27.5837 0.198652 27.3393 0.113749C27.0923 0.0288465 26.8916 -0.0457652 26.4542 0.0339921ZM26.7758 2.04336C26.8916 2.0871 27.0768 2.1154 27.2569 2.20545C27.6943 2.42156 28.2089 2.75603 28.7852 3.09049C29.3589 3.42239 29.961 3.70282 30.473 3.97297C30.7302 4.10933 30.9695 4.28171 31.1959 4.37433C31.4485 4.48897 31.7239 4.54441 32.0012 4.53642C32.2784 4.54307 32.5535 4.48769 32.8065 4.37433C33.0329 4.28171 33.2722 4.10933 33.5269 3.97297C34.0415 3.70282 34.6435 3.42239 35.2173 3.08792C35.791 2.75603 36.3056 2.42156 36.7455 2.20545C36.9256 2.1154 37.1108 2.08967 37.2266 2.04336C37.3192 2.12569 37.417 2.14627 37.5482 2.2852C37.8878 2.64025 38.3278 3.14195 38.7549 3.65137C39.182 4.16336 39.6528 4.74739 40.0413 5.17962C40.2368 5.39574 40.4221 5.57583 40.6047 5.74307C40.7848 5.9103 40.8929 6.01321 41.248 6.14442C41.5006 6.25612 41.7745 6.31143 42.0507 6.30651C42.2977 6.30651 42.5678 6.26277 42.856 6.22418C43.4271 6.147 44.0523 6.01836 44.7033 5.90258C45.3568 5.78938 45.9897 5.63501 46.4734 5.58098C46.6535 5.55525 46.8336 5.58098 46.9571 5.58098C47.0188 5.69161 47.1114 5.86399 47.1963 6.06467C47.3944 6.51491 47.6131 7.12467 47.8395 7.75243C48.0685 8.3802 48.3438 8.98224 48.5651 9.52253C48.6731 9.7901 48.7709 10.0242 48.8867 10.2429C48.9999 10.4642 49.0796 10.6443 49.3678 10.8861C49.6559 11.1331 49.8566 11.2154 50.0908 11.2901C50.3275 11.3672 50.613 11.3878 50.8961 11.4521C51.4621 11.5756 52.0924 11.7351 52.7433 11.8535C53.3968 11.9718 54.04 12.0567 54.5134 12.1751C54.7193 12.2266 54.8788 12.2934 54.9971 12.3346C55.0177 12.4633 55.0615 12.6048 55.0743 12.8183C55.1103 13.3097 55.0743 13.9967 55.0743 14.6656C55.0769 15.3345 55.0537 16.0137 55.0743 16.5952C55.0872 16.8885 55.1258 17.1561 55.1567 17.4005C55.1901 17.6449 55.2107 17.879 55.3985 18.2058C55.5837 18.5299 55.7664 18.6149 55.9594 18.7666C56.1549 18.921 56.3607 19.0934 56.6026 19.2503C57.0914 19.5616 57.7192 19.8781 58.2929 20.2151C58.8641 20.5496 59.4147 20.9047 59.8186 21.1799C60.0244 21.3163 60.1274 21.4192 60.2225 21.5015C60.1968 21.625 60.1196 21.7768 60.0605 21.9827C59.9241 22.4586 59.7234 23.0427 59.4996 23.6704C59.2732 24.3008 59.0313 24.9646 58.8564 25.5229C58.7663 25.7981 58.7457 26.0812 58.6943 26.3256C58.6428 26.5674 58.5502 26.7604 58.6145 27.1283C58.6788 27.4988 58.8049 27.6429 58.9361 27.8513C59.0648 28.0648 59.2423 28.2629 59.4173 28.4945C59.7723 28.9576 60.1994 29.5107 60.6239 30.0227C61.0484 30.5373 61.4601 30.9901 61.7508 31.3889C61.8949 31.5921 62.0107 31.7645 62.0724 31.8726C62.0081 31.9806 61.8769 32.099 61.7508 32.2739C61.4601 32.6727 61.0484 33.2078 60.6239 33.7224C60.1994 34.237 59.7723 34.7078 59.4173 35.1683C59.2423 35.3999 59.0673 35.6031 58.9361 35.8115C58.7732 36.0542 58.6636 36.3287 58.6145 36.6168C58.5502 36.9847 58.6403 37.1777 58.6943 37.4195C58.7457 37.6614 58.7663 37.8672 58.8564 38.1451C59.0313 38.6982 59.2732 39.3646 59.4996 39.9924C59.7234 40.6227 59.9241 41.2067 60.0605 41.6827C60.1196 41.8885 60.1994 42.0403 60.2225 42.1638C60.1299 42.2461 60.0219 42.3491 59.8186 42.4854C59.4147 42.7607 58.8667 43.1132 58.2929 43.4502C57.7192 43.7847 57.0914 44.1037 56.6026 44.415C56.3607 44.572 56.1549 44.7443 55.9594 44.8987C55.7664 45.0505 55.5837 45.1354 55.3985 45.4596C55.2107 45.7863 55.1901 46.0179 55.1567 46.2649C55.1232 46.5093 55.0872 46.7769 55.0769 47.0676C55.0512 47.6516 55.0769 48.3283 55.0769 48.9972C55.0769 49.6661 55.1103 50.3531 55.0769 50.8471C55.0615 51.058 55.0151 51.2047 54.9946 51.3307C54.8788 51.3719 54.7193 51.4414 54.5134 51.4903C54.04 51.6086 53.3968 51.6935 52.7433 51.8119C52.0924 51.9302 51.4595 52.0897 50.8961 52.2132C50.613 52.275 50.3275 52.2981 50.0908 52.3753C49.8226 52.4529 49.5755 52.5901 49.3678 52.7767C49.0796 53.0211 48.9999 53.2012 48.8841 53.4199C48.7655 53.6556 48.6582 53.8969 48.5625 54.1428C48.3438 54.6831 48.0685 55.2852 47.8421 55.9129C47.6106 56.5407 47.3944 57.2302 47.1989 57.6805C47.1114 57.876 47.0188 57.9738 46.9545 58.0844C46.8361 58.0844 46.656 58.1101 46.4734 58.0844C45.9897 58.0329 45.3568 57.876 44.7033 57.7628C44.0523 57.6496 43.4271 57.6007 42.856 57.5209C42.5891 57.4801 42.3203 57.4526 42.0507 57.4386C41.8037 57.4386 41.603 57.3872 41.248 57.5209C40.862 57.6624 40.7205 57.8168 40.5224 58.0021C40.3269 58.1873 40.0953 58.4034 39.8792 58.6453C39.4495 59.1315 38.9736 59.7078 38.5156 60.2533C38.1297 60.7138 37.7618 61.1589 37.4685 61.4599C37.3758 61.5525 37.3759 61.64 37.3064 61.7018H37.2292C37.1108 61.658 36.9359 61.6349 36.7455 61.5397C36.3081 61.3236 35.7936 60.9891 35.2173 60.6572C34.6435 60.3227 34.0415 59.9625 33.5295 59.6924C33.2722 59.556 33.0329 59.466 32.8039 59.3708C32.5775 59.2756 32.3794 59.1289 32.0012 59.1289C31.623 59.1289 31.4249 59.273 31.1959 59.3682C30.9695 59.4634 30.7302 59.5535 30.4755 59.6898C29.961 59.9625 29.3589 60.3227 28.7852 60.6546C28.2114 60.9891 27.6943 61.3236 27.2569 61.5397C27.0665 61.6349 26.8916 61.658 26.7758 61.7018C26.6645 61.5988 26.5572 61.4915 26.4542 61.3802C26.0384 60.9361 25.636 60.4796 25.2475 60.0114C24.8205 59.502 24.3496 58.9154 23.9611 58.4857C23.7827 58.2888 23.5946 58.1008 23.3977 57.9223C23.2176 57.7551 23.1095 57.6496 22.7545 57.5209C22.3994 57.3897 22.1987 57.4283 21.9518 57.4386C21.7048 57.4386 21.4346 57.4823 21.1465 57.5209C20.5753 57.5981 19.9501 57.6444 19.2966 57.7602C18.6457 57.8734 18.0128 58.0304 17.5291 58.0818C17.349 58.1075 17.1689 58.0818 17.0454 58.0818C16.9862 57.9712 16.891 57.876 16.8061 57.6805C16.608 57.2302 16.3893 56.5407 16.1629 55.9129C15.9339 55.2852 15.6586 54.6831 15.4399 54.1428C15.3432 53.8969 15.2351 53.6557 15.1158 53.4199C15.0026 53.2012 14.9228 53.0211 14.6346 52.7767C14.4266 52.5907 14.1796 52.4536 13.9117 52.3753C13.675 52.2981 13.3894 52.2775 13.1064 52.2132C12.5404 52.0897 11.91 51.9302 11.2565 51.8119C10.6056 51.6935 9.96239 51.6086 9.48899 51.4903C9.28317 51.4388 9.12365 51.3693 9.0053 51.3282C8.98729 51.2021 8.94098 51.058 8.92812 50.8471C8.8921 50.3531 8.92812 49.6661 8.92812 48.9972C8.92554 48.3283 8.9487 47.6516 8.92812 47.0676C8.91352 46.7989 8.88605 46.531 8.84579 46.2649C8.81234 46.0179 8.79176 45.7863 8.60394 45.4596C8.4187 45.1354 8.23603 45.0479 8.04306 44.8987C7.84753 44.7443 7.6417 44.572 7.39986 44.415C6.91102 44.1037 6.28325 43.7873 5.70951 43.4502C5.13834 43.1158 4.58776 42.7607 4.18382 42.4854C3.978 42.3491 3.87509 42.2461 3.77989 42.1638C3.80562 42.0403 3.8828 41.886 3.94198 41.6801C4.07834 41.2067 4.27902 40.6227 4.50285 39.9924C4.72926 39.3646 4.97111 38.6982 5.14606 38.1451C5.23611 37.8672 5.25669 37.664 5.30815 37.4195C5.35961 37.1777 5.45223 36.9847 5.38791 36.6168C5.33881 36.3287 5.2292 36.0542 5.0663 35.8115C4.93766 35.6006 4.76014 35.3999 4.58518 35.1683C4.23271 34.7052 3.80305 34.2344 3.37853 33.7224C2.95401 33.2078 2.53979 32.6727 2.25163 32.2739C2.13564 32.1196 2.02828 31.959 1.93003 31.7928C1.99435 31.6822 2.12556 31.5664 2.25163 31.3914C2.53979 30.9901 2.95401 30.5373 3.37853 30.0227C3.80305 29.5081 4.23271 28.9576 4.58518 28.4945C4.76014 28.2629 4.93509 28.0622 5.0663 27.8513C5.19752 27.6429 5.32359 27.4988 5.38791 27.1309C5.45223 26.7604 5.36218 26.5674 5.30815 26.3256C5.25669 26.0837 5.23611 25.7981 5.14606 25.5203C4.97111 24.9646 4.72926 24.3008 4.50285 23.6704C4.29899 23.1136 4.11195 22.5508 3.94198 21.9827C3.8828 21.7768 3.80305 21.625 3.77989 21.5015C3.87251 21.4192 3.98057 21.3163 4.18382 21.1799C4.58776 20.9047 5.13577 20.5496 5.70951 20.2151C6.28325 19.8807 6.91102 19.5616 7.39986 19.2503C7.6417 19.0934 7.84753 18.921 8.04306 18.7666C8.23603 18.6149 8.4187 18.53 8.60394 18.2032C8.79176 17.879 8.81234 17.6475 8.84579 17.4005C8.87923 17.1561 8.91525 16.8859 8.92554 16.5952C8.95127 16.0137 8.92554 15.3345 8.92554 14.6656C8.92554 13.9967 8.8921 13.3097 8.92554 12.8183C8.94098 12.6048 8.98729 12.4581 9.00787 12.3346C9.12365 12.2934 9.28317 12.224 9.48899 12.1751C9.96239 12.0567 10.6056 11.9693 11.2591 11.8535C11.91 11.7351 12.5429 11.5756 13.1064 11.4496C13.3894 11.3878 13.675 11.3647 13.9117 11.2901C14.1794 11.2115 14.4264 11.0744 14.6346 10.8887C14.9228 10.6443 15.0026 10.4642 15.1183 10.2455C15.2315 10.0242 15.3293 9.7901 15.4374 9.51995C15.6586 8.97966 15.9339 8.3802 16.1629 7.75243C16.3893 7.12467 16.608 6.51748 16.8061 6.06467C16.8936 5.86656 16.9862 5.69161 17.048 5.58098C17.1663 5.58098 17.3464 5.55525 17.5291 5.58098C18.0128 5.63501 18.6457 5.78938 19.2992 5.90258C19.9501 6.01578 20.5753 6.147 21.1465 6.22418C21.4346 6.26277 21.7048 6.29879 21.9518 6.30651C22.2273 6.30504 22.4999 6.24998 22.7545 6.14442C23.1095 6.01321 23.2176 5.9103 23.3977 5.74307C23.5804 5.57583 23.7656 5.39574 23.9611 5.17962C24.3496 4.74739 24.8205 4.16336 25.2475 3.65137C25.6746 3.14195 26.1146 2.64025 26.4542 2.2852C26.5854 2.14627 26.6858 2.12569 26.7758 2.04336ZM31.8417 8.71724C25.7621 8.71724 19.7366 11.1717 15.4374 15.4709C11.1407 19.7675 8.68627 25.793 8.68627 31.8726C8.68627 37.9495 11.1407 43.8953 15.4399 48.1945C19.7366 52.4911 25.7621 55.0279 31.8391 55.0279C37.9187 55.0279 43.9443 52.4911 48.2435 48.1945C52.5563 43.8556 54.9833 37.9903 54.9971 31.8726C54.9971 25.7956 52.5401 19.77 48.2435 15.4709C43.9443 11.1743 37.9187 8.71724 31.8417 8.71724ZM31.8417 11.2901C37.2138 11.2901 42.5961 13.5207 46.3936 17.3207C50.2251 21.1987 52.3885 26.4211 52.4217 31.8726C52.4217 37.2446 50.1911 42.6269 46.3936 46.4244C42.5153 50.2574 37.2918 52.4218 31.8391 52.4551C26.3873 52.4211 21.1649 50.2568 17.2872 46.4244C13.4548 42.5468 11.2905 37.3244 11.2565 31.8726C11.2565 26.5005 13.4897 21.1182 17.2872 17.3207C21.1649 13.4883 26.3899 11.324 31.8417 11.2901ZM31.7594 19.5719C30.9875 19.5719 30.6531 19.9347 30.3932 20.2151C30.1359 20.493 29.9507 20.8481 29.75 21.1799C29.3486 21.8437 29.0039 22.6207 28.6231 23.4312C28.2423 24.2416 27.8075 25.0623 27.4988 25.6824C27.3444 25.9911 27.2801 26.2381 27.1772 26.4053C27.1257 26.4902 27.0434 26.5443 27.0151 26.5674C26.8247 26.6137 26.4748 26.5931 26.1326 26.6446C25.4457 26.7578 24.6095 26.9276 23.7193 27.0485C22.8291 27.1695 21.9826 27.2647 21.2262 27.4499C20.8393 27.5467 20.4627 27.6812 20.1019 27.8513C19.7597 28.0159 19.2915 28.16 19.0573 28.8984C18.8232 29.6342 19.1114 30.0947 19.2992 30.4266C19.4844 30.756 19.6851 31.0184 19.9424 31.3091C20.4518 31.8957 21.1336 32.4669 21.7897 33.0792C22.4457 33.6915 23.0632 34.363 23.5598 34.8467C23.8068 35.0886 24.0743 35.2584 24.203 35.4102C24.203 35.4411 24.2081 35.4745 24.203 35.5723C24.1901 35.7678 24.1773 36.0328 24.1232 36.375C24.0152 37.0594 23.799 37.9856 23.6395 38.868C23.4891 39.7197 23.3818 40.5784 23.3179 41.4409C23.2896 41.8268 23.269 42.187 23.3179 42.5652C23.3668 42.9408 23.4131 43.4013 24.0409 43.8516C24.6712 44.3018 25.1987 44.168 25.5692 44.0934C25.9422 44.0188 26.2561 43.921 26.6137 43.7718C27.3315 43.4682 28.0802 43.0797 28.8649 42.6449C29.6522 42.2127 30.4215 41.6801 31.0364 41.3585C31.3451 41.199 31.6565 41.1141 31.8417 41.0369C31.8829 41.0524 31.9446 41.0163 32.0012 41.0369C32.1839 41.1141 32.4952 41.2839 32.8065 41.4409C33.424 41.7547 34.183 42.1432 34.9754 42.5652C35.7678 42.9897 36.5088 43.3962 37.2266 43.6921C37.5868 43.8387 37.8981 43.9442 38.2738 44.0137C38.6468 44.0831 39.1768 44.2272 39.7995 43.7718C40.4221 43.3139 40.4787 42.7813 40.525 42.4057C40.5639 42.031 40.5639 41.6534 40.525 41.2788C40.4555 40.5069 40.2934 39.6682 40.1211 38.7883C39.9512 37.9058 39.7557 36.977 39.6399 36.2927C39.5808 35.953 39.5756 35.688 39.5576 35.4899V35.4102C39.5808 35.3793 39.6091 35.3664 39.6399 35.3304C39.7686 35.1761 39.9564 35.014 40.2008 34.767C40.6896 34.2781 41.3226 33.6195 41.9709 32.9969C42.6193 32.3794 43.2367 31.7413 43.741 31.1496C43.9906 30.8537 44.2016 30.5964 44.3842 30.2646C44.5643 29.9301 44.8679 29.4696 44.6235 28.7363C44.3817 28.003 43.8439 27.8487 43.4992 27.6917C43.1544 27.5322 42.8302 27.3779 42.452 27.2904C41.6014 27.1151 40.7428 26.9812 39.8792 26.889C38.989 26.7758 38.1554 26.7475 37.4685 26.6472C37.1977 26.6055 36.929 26.5514 36.6632 26.4851C36.6426 26.4645 36.532 26.5211 36.5037 26.4851C36.4522 26.4465 36.5191 26.4156 36.5037 26.4053C36.4007 26.2381 36.2592 25.9088 36.1023 25.6C35.7858 24.9826 35.4488 24.2364 35.0552 23.4312C34.6641 22.6233 34.1804 21.7588 33.7687 21.1002C33.5655 20.7683 33.4677 20.4904 33.2079 20.2151C33.0295 20.0069 32.8069 19.8411 32.5563 19.7298C32.3057 19.6185 32.0335 19.5646 31.7594 19.5719ZM31.7594 22.8677C32.0347 23.3463 32.4077 23.9046 32.7242 24.5555C33.105 25.3402 33.4188 26.1197 33.7713 26.8067C33.9463 27.1514 34.1572 27.4962 34.3322 27.7715C34.5072 28.0494 34.6358 28.2758 35.0577 28.5768C35.4771 28.8778 35.7009 28.9035 36.0225 28.9781C36.3416 29.0553 36.7635 29.0811 37.1469 29.1402C37.911 29.2509 38.7729 29.3512 39.6399 29.4593C40.3758 29.5545 41.0215 29.593 41.5696 29.7011C41.1939 30.1153 40.7385 30.635 40.2008 31.1496C39.573 31.7516 38.899 32.3717 38.3535 32.9171C38.0808 33.1924 37.839 33.3905 37.628 33.6401C37.4196 33.8948 37.2241 34.1135 37.0671 34.6075C36.9102 35.0963 36.9591 35.3253 36.9848 35.652C37.0105 35.9788 37.0825 36.3981 37.1469 36.7763C37.2755 37.5379 37.4633 38.4152 37.6306 39.2694C37.7695 39.9975 37.8878 40.6459 37.9522 41.199C37.4376 40.9726 36.8458 40.669 36.1821 40.314C35.4128 39.9023 34.6204 39.4572 33.9308 39.1099C33.5861 38.9349 33.2696 38.7497 32.966 38.6262C32.613 38.4629 32.2281 38.3803 31.8391 38.3843C31.3246 38.3843 31.1779 38.5001 30.8769 38.6262C30.5733 38.7523 30.2543 38.9298 29.9095 39.1099C29.2251 39.4675 28.4224 39.9743 27.6609 40.3963C27.0254 40.7436 26.4722 40.9675 25.9705 41.199C26.0297 40.6459 26.0811 39.9975 26.2124 39.2694C26.3667 38.4127 26.5751 37.5405 26.696 36.7763C26.7552 36.3956 26.7527 36.056 26.7732 35.7318C26.799 35.405 26.8581 35.1761 26.696 34.6872C26.5823 34.3271 26.3888 33.9974 26.13 33.7224C25.9191 33.4728 25.6849 33.2696 25.4096 32.9995C24.8565 32.4592 24.1953 31.9034 23.5572 31.3091C23.0246 30.81 22.5692 30.2697 22.1936 29.8632C22.7339 29.75 23.4028 29.6394 24.1232 29.5416C24.9851 29.4232 25.8496 29.3409 26.6137 29.22C26.9971 29.1582 27.3418 29.0579 27.6583 28.9781C27.9773 28.8984 28.2089 28.883 28.6257 28.5768C29.0399 28.268 29.0965 28.0519 29.2689 27.7715C29.4387 27.4936 29.6574 27.154 29.8298 26.8067C30.1745 26.1146 30.5064 25.3453 30.8743 24.5555C31.1856 23.8943 31.4918 23.3514 31.7594 22.8677ZM15.4374 59.2885C15.5691 59.5259 15.7653 59.7213 16.0034 59.8519C16.3842 60.0757 16.6286 60.0063 16.8859 60.014C17.1431 60.014 17.4004 59.9625 17.6912 59.9317C18.27 59.8699 18.9596 59.8082 19.6208 59.6924C20.2794 59.5766 20.8815 59.4403 21.3883 59.3708C21.6404 59.3373 21.8874 59.2936 22.0315 59.2885C22.0392 59.3039 22.0572 59.3168 22.1113 59.3708C22.2193 59.4686 22.42 59.5792 22.595 59.7721C22.8342 60.0371 23.1018 60.4539 23.3977 60.8167L19.2966 68.2933L18.252 64.3543C18.1474 64.0296 17.9226 63.7571 17.6237 63.5926C17.3248 63.4281 16.9744 63.3839 16.644 63.4693L12.5429 64.5164L15.4374 59.2885ZM41.8912 59.2885C41.7188 59.3528 41.8268 59.2885 41.9709 59.2885C42.115 59.2885 42.362 59.3373 42.6141 59.3708C43.1184 59.4403 43.723 59.5766 44.3842 59.6924C45.0429 59.8082 45.7324 59.8673 46.3138 59.9317C46.602 59.9625 46.8593 60.0191 47.1166 60.014C47.3739 60.014 47.6183 60.0732 48.0016 59.8519C48.1277 59.7773 48.1611 59.6924 48.2409 59.6101L51.0556 64.5164L47.0368 63.4693C46.7065 63.3839 46.356 63.4281 46.0571 63.5926C45.7582 63.7571 45.5334 64.0296 45.4288 64.3543L44.3817 68.3756L40.3629 61.1383C40.7128 60.7189 41.0267 60.2713 41.3277 59.9317C41.5232 59.713 41.6853 59.4866 41.8114 59.3708C41.9349 59.2524 42.0816 59.219 41.8912 59.2885Z"/>
+                                                    </graphic>
+                                                </Button>
+                                                <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" spacing="8.0">
+                                                    <children>
+                                                        <Label alignment="CENTER" contentDisplay="CENTER"
+                                                               text="Excellent" textFill="#3c3c3c">
+                                                            <font>
+                                                                <Font name="Amber EN Medium" size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="excellentLB" alignment="CENTER"
+                                                               contentDisplay="CENTER" text="0" textFill="#3c3c3c">
+                                                            <font>
+                                                                <Font name="Amber EN Medium" size="18.0"/>
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="tasksCalendar" prefWidth="640.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Button layoutX="768.0" layoutY="634.0" mnemonicParsing="false" onAction="#createNew"
+                                        prefHeight="36.0" prefWidth="125.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Ajouter">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <CalendarView fx:id="calendarView" layoutX="40.0" layoutY="44.0" prefHeight="552.0"
+                                              prefWidth="853.0"/>
+                                <Button disable="true" layoutX="573.0" layoutY="634.0" mnemonicParsing="false"
+                                        prefHeight="36.0" prefWidth="159.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Ajouter Plusieurs">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button layoutX="40.0" layoutY="634.0" mnemonicParsing="false"
+                                        onAction="#switchToTasksTable" prefHeight="36.0" prefWidth="125.0"
+                                        styleClass="login" stylesheets="@css/globals.css" text="Vue Tableau">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

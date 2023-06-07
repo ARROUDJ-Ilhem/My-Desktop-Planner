@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="512.0" maxWidth="945.0" minHeight="512.0" minWidth="945.0" prefHeight="512.0" prefWidth="945.0"
+            stylesheets="@css/globals.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="tp.javafx.controllers.loginController">
+    <children>
+        <BorderPane prefHeight="512.0" prefWidth="945.0">
+            <left>
+                <Pane prefWidth="475.0" styleClass="gradientColor" stylesheets="@css/globals.css"
+                      BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fitHeight="189.0" fitWidth="192.0" layoutX="143.0" layoutY="83.0" pickOnBounds="true"
+                                   preserveRatio="true">
+                            <image>
+                                <Image url="@assets/logo.png"/>
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="288.0"
+                               prefHeight="44.0" prefWidth="317.0" text="My Desktop Planner" textAlignment="CENTER"
+                               textFill="#ffffffcf">
+                            <font>
+                                <Font name="Amber EN Bold" size="34.0"/>
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutX="79.0" layoutY="344.0"
+                               prefHeight="44.0" prefWidth="317.0" text="Track all your tasks and projects"
+                               textAlignment="CENTER" textFill="#ffffffcf">
+                            <font>
+                                <Font name="Amber EN" size="20.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </Pane>
+            </left>
+            <center>
+                <StackPane BorderPane.alignment="CENTER">
+                    <children>
+                        <Pane fx:id="signUpPane" prefHeight="617.0" prefWidth="540.0"
+                              style="-fx-background-color: #fff;">
+                            <children>
+                                <Button layoutX="45.0" layoutY="47.0" onAction="#handleGoBack" prefHeight="49.0"
+                                        prefWidth="25.0" styleClass="back">
+                                    <graphic>
+                                        <SVGPath
+                                                content="M12.2897 28.3885C11.991 28.3895 11.6958 28.3236 11.4258 28.1956C11.1559 28.0675 10.9181 27.8806 10.7299 27.6486L1.0709 15.6497C0.776762 15.2919 0.615967 14.8431 0.615967 14.3799C0.615967 13.9166 0.776762 13.4678 1.0709 13.11L11.0698 1.11111C11.4093 0.702714 11.8971 0.445889 12.4259 0.397134C12.9547 0.348379 13.4812 0.511688 13.8896 0.851133C14.2979 1.19058 14.5548 1.67835 14.6035 2.20716C14.6523 2.73596 14.489 3.26247 14.1495 3.67087L5.21046 14.3899L13.8496 25.1088C14.0941 25.4024 14.2494 25.7598 14.2972 26.1389C14.3449 26.518 14.2831 26.9028 14.119 27.2478C13.9549 27.5928 13.6954 27.8836 13.3712 28.0858C13.0471 28.2879 12.6717 28.393 12.2897 28.3885Z"/>
+                                    </graphic>
+                                </Button>
+                                <Label layoutX="95.0" layoutY="119.0" prefHeight="44.0" prefWidth="227.0"
+                                       text="New User" textFill="#3c3c3ccf">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="34.0"/>
+                                    </font>
+                                </Label>
+                                <TextField fx:id="signUsername" layoutX="96.0" layoutY="218.0" prefHeight="45.0"
+                                           prefWidth="280.0" promptText="Username">
+                                    <font>
+                                        <Font name="Amber EN" size="13.0"/>
+                                    </font>
+                                </TextField>
+                                <PasswordField fx:id="signPassword" layoutX="96.0" layoutY="295.0" prefHeight="44.0"
+                                               prefWidth="279.0" promptText="Password"/>
+                                <Button fx:id="signUp" onAction="#handleSignUp" layoutX="255.0" layoutY="376.0"
+                                        mnemonicParsing="false" prefHeight="40.0" prefWidth="120.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Sign Up">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                            </children>
+                        </Pane>
+                        <Pane fx:id="logPane" prefHeight="617.0" prefWidth="540.0" style="-fx-background-color: #fff;">
+                            <children>
+                                <Label alignment="CENTER" contentDisplay="CENTER" layoutX="113.0" layoutY="57.0"
+                                       prefHeight="44.0" prefWidth="245.0" text="Welcome Back" textFill="#08121ecf">
+                                    <font>
+                                        <Font name="Amber EN Bold" size="34.0"/>
+                                    </font>
+                                </Label>
+                                <Button fx:id="logIn" layoutX="255.0" layoutY="340.0" mnemonicParsing="false"
+                                        onAction="#handleLogIn" prefHeight="40.0" prefWidth="120.0" styleClass="login"
+                                        stylesheets="@css/globals.css" text="Log In">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <Button fx:id="createNew" layoutX="95.0" layoutY="420.0" mnemonicParsing="false"
+                                        onAction="#handleCreateNew" prefHeight="40.0" prefWidth="280.0"
+                                        styleClass="newAccount" stylesheets="@css/globals.css"
+                                        text="Create New Account">
+                                    <font>
+                                        <Font name="Amber EN" size="14.0"/>
+                                    </font>
+                                </Button>
+                                <TextField fx:id="logUsername" layoutX="96.0" layoutY="174.0" prefHeight="45.0"
+                                           prefWidth="280.0" promptText="Username">
+                                    <font>
+                                        <Font name="Amber EN" size="13.0"/>
+                                    </font>
+                                </TextField>
+                                <PasswordField fx:id="logPassword" layoutX="96.0" layoutY="255.0" prefHeight="44.0"
+                                               prefWidth="279.0" promptText="Password"/>
+                            </children>
+                        </Pane>
+                    </children>
+                </StackPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>
