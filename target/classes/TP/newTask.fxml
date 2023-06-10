@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="816.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/20.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="tp.javafx.controllers.newTaskController">
+    <children>
+        <Label layoutX="66.0" layoutY="41.0" text="Nouvelle Tache" textFill="#3c3c3c">
+            <font>
+                <Font name="Amber EN Medium" size="28.0"/>
+            </font>
+        </Label>
+        <Label layoutX="316.0" layoutY="237.0" text="Importance *" textFill="#3c3c3c">
+            <font>
+                <Font name="Amber EN Medium" size="18.0"/>
+            </font>
+        </Label>
+        <HBox alignment="CENTER" layoutX="48.0" layoutY="464.0" prefHeight="32.0" prefWidth="100.0" spacing="15.0">
+            <children>
+                <Label fx:id="repeatLB" prefHeight="32.0" text="Répéter" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="repeatCB" mnemonicParsing="false" onAction="#checkRepeat"/>
+            </children>
+        </HBox>
+        <VBox layoutX="315.0" layoutY="343.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label text="Durée *" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="83.0" spacing="5.0">
+                    <children>
+                        <TextField fx:id="heures" prefHeight="30.0" prefWidth="100.0" promptText="heures">
+                            <font>
+                                <Font name="Amber EN" size="14.0"/>
+                            </font>
+                        </TextField>
+                        <Label text=":" textFill="#3c3c3c">
+                            <font>
+                                <Font name="Amber EN Medium" size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="minutes" prefHeight="30.0" prefWidth="100.0" promptText="minutes">
+                            <font>
+                                <Font name="Amber EN" size="14.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <VBox layoutX="48.0" layoutY="545.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label fx:id="jourLB" text="Jour" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="jourCB" onAction="#checkJour" prefHeight="30.0" prefWidth="217.0"/>
+            </children>
+        </VBox>
+        <Button fx:id="saveButton" layoutX="413.0" layoutY="759.0" mnemonicParsing="false" onAction="#onSaveButtonClick"
+                prefHeight="35.0" prefWidth="120.0" styleClass="login" stylesheets="@css/globals.css"
+                text="Sauvegarder">
+            <font>
+                <Font name="Amber EN Medium" size="14.0"/>
+            </font>
+        </Button>
+        <VBox layoutX="48.0" layoutY="237.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label text="Categorie *" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="categorieCB" prefHeight="30.0" prefWidth="217.0"/>
+            </children>
+        </VBox>
+        <VBox layoutX="316.0" layoutY="446.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label fx:id="periodeLB" disable="true" text="Périodicité" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="periodeTF" disable="true" onAction="#checkRepeat" prefHeight="30.0"/>
+            </children>
+        </VBox>
+        <VBox layoutX="48.0" layoutY="123.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label text="Nom *" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <TextField fx:id="nomTF" prefHeight="30.0" prefWidth="217.0" promptText="eg: Revisions">
+                    <font>
+                        <Font size="14.0"/>
+                    </font>
+                </TextField>
+            </children>
+        </VBox>
+        <VBox layoutX="316.0" layoutY="122.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label text="Deadline *" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <DatePicker fx:id="deadlineDP" prefHeight="39.0" prefWidth="218.0"/>
+            </children>
+        </VBox>
+        <HBox alignment="CENTER_LEFT" layoutX="48.0" layoutY="361.0" prefHeight="32.0" prefWidth="177.0" spacing="15.0">
+            <children>
+                <Label fx:id="bloqueLB" prefHeight="32.0" prefWidth="163.0" text="Bloquer Créneau" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="bloqueCB" mnemonicParsing="false"/>
+            </children>
+        </HBox>
+        <VBox layoutX="315.0" layoutY="545.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label fx:id="creneauLB" disable="true" text="Créneau" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <ChoiceBox fx:id="creneauCB" accessibleRole="CHECK_MENU_ITEM" disable="true" prefHeight="30.0"
+                           prefWidth="217.0"/>
+            </children>
+        </VBox>
+        <HBox alignment="CENTER" layoutX="48.0" layoutY="672.0" prefHeight="32.0" spacing="15.0">
+            <children>
+                <Label fx:id="composeLB" prefHeight="32.0" text="Tache Composée" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <CheckBox fx:id="composeCB" mnemonicParsing="false" onAction="#checkCompose"/>
+            </children>
+        </HBox>
+        <VBox layoutX="315.0" layoutY="654.0" prefHeight="67.0" prefWidth="218.0" spacing="12.0">
+            <children>
+                <Label fx:id="sousLB" disable="true" text="Durée sous tache" textFill="#3c3c3c">
+                    <font>
+                        <Font name="Amber EN Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="83.0" spacing="5.0">
+                    <children>
+                        <TextField fx:id="heures1" disable="true" prefHeight="30.0" prefWidth="100.0"
+                                   promptText="heures">
+                            <font>
+                                <Font name="Amber EN" size="14.0"/>
+                            </font>
+                        </TextField>
+                        <Label text=":" textFill="#3c3c3c">
+                            <font>
+                                <Font name="Amber EN Medium" size="18.0"/>
+                            </font>
+                        </Label>
+                        <TextField fx:id="minutes1" disable="true" prefHeight="30.0" prefWidth="100.0"
+                                   promptText="minutes">
+                            <font>
+                                <Font name="Amber EN" size="14.0"/>
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <ChoiceBox fx:id="importanceCB" layoutX="315.0" layoutY="275.0" prefHeight="30.0" prefWidth="217.0"/>
+    </children>
+</AnchorPane>
