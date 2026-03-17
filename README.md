@@ -50,7 +50,7 @@
  
 1. **Clone the repository**
    ```bash
-   git clone (URL of the Repo)
+   git clone https://github.com/your-username/My-Desktop-Planner.git
    cd my-desktop-planner
    ```
  
@@ -81,4 +81,4 @@ Contributions, issues, and feature requests are welcome. Feel free to open an is
  
 ## 📄 License
  
-This project was developed as part of a JavaFX course project. See `LICENSE` for details.
+See `LICENSE` for details.
